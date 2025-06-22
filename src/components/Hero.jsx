@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputerCanvas } from "./canvas";
+import ErrorBoundary from "./ErrorBoundary";
 
 const Hero = () => {
   return (
@@ -24,7 +25,18 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputerCanvas />
+      <ErrorBoundary
+        fallback={
+          <div className="w-full h-[60vh] flex items-center justify-center">
+            <div className="text-white bg-tertiary p-5 rounded-lg">
+              <h3 className="text-xl font-bold">3D Model Unavailable</h3>
+              <p>We're having trouble displaying the 3D computer model.</p>
+            </div>
+          </div>
+        }
+      >
+        <ComputerCanvas />
+      </ErrorBoundary>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
