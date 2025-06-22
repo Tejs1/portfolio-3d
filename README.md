@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# 3D Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern 3D portfolio website built with React, Three.js, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Modern UI/UX with a 3D experience
+- Responsive design for all device sizes
+- Interactive 3D elements using Three.js
+- Animated components using Framer Motion
+- Contact form with EmailJS integration
+- Performance optimized 3D rendering
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React.js
+- Three.js
+- Framer Motion
+- Tailwind CSS
+- EmailJS
+- Vite
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Live Demo
+
+[View Live Demo](https://your-username.github.io/portfolio-3d/)
+
+## Screenshots
+
+![Portfolio Screenshot](screenshot.png)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ or Bun
+- Git
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/your-username/portfolio-3d.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Navigate to the project directory
+```bash
+cd portfolio-3d
 ```
+
+3. Install dependencies
+```bash
+bun install
+# or
+npm install
+```
+
+4. Start the development server
+```bash
+bun run dev
+# or
+npm run dev
+```
+
+5. Open your browser and visit `http://localhost:5173`
+
+### Building for Production
+
+```bash
+bun run build
+# or
+npm run build
+```
+
+### Deployment
+
+You can deploy this portfolio to GitHub Pages using the provided deploy script:
+
+1. Update the GitHub repository details in `deploy.sh`
+2. Make the script executable:
+```bash
+chmod +x deploy.sh
+```
+3. Run the deployment script:
+```bash
+./deploy.sh
+```
+
+## Customization
+
+1. Personal Information:
+   - Edit `src/constants/index.ts` to update your personal information, experience, projects, and testimonials
+
+2. 3D Models:
+   - The 3D models are created directly using Three.js in the components/canvas directory
+
+3. Contact Form:
+   - Update the EmailJS service ID, template ID, and public key in `src/components/Contact.jsx`
+
+## License
+
+MIT
+
+## Acknowledgments
+
+- [Three.js](https://threejs.org/)
+- [React Three Fiber](https://github.com/pmndrs/react-three-fiber)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
