@@ -1,10 +1,10 @@
 import { BrowserRouter } from "react-router-dom";
-import World from "./components/World";
+import PortfolioWorld from "./components/PortfolioWorld";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <World />
+      <PortfolioWorld />
     </BrowserRouter>
   );
 };
