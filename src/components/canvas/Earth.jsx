@@ -6,11 +6,11 @@ import * as THREE from "three";
 const Earth = () => {
   const earthRef = useRef();
   const textures = useTexture({
-    map: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/17271/lroc_color_poles_1k.jpg", 
+    map: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/17271/lroc_color_poles_1k.jpg",
     bumpMap: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/17271/ldem_3_8bit.jpg",
     roughnessMap: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/17271/lroc_color_poles_1k.jpg"
   });
-  
+
   useFrame(({ clock }) => {
     earthRef.current.rotation.y = clock.getElapsedTime() * 0.1;
   });
@@ -35,7 +35,7 @@ const EarthCanvas = () => {
       shadows
       frameloop="always"
       gl={{ preserveDrawingBuffer: true }}
-      camera={{ 
+      camera={{
         fov: 45,
         near: 0.1,
         far: 200,
