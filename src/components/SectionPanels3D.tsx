@@ -67,19 +67,46 @@ export const sectionData: Record<SectionName, { title: string; content: JSX.Elem
 export function SectionPanel({ section, onClose }: { section: SectionName; onClose: () => void }) {
   return (
     <Html center distanceFactor={8} style={{ pointerEvents: 'auto', zIndex: 10 }}>
-      <div style={{
-        background: 'rgba(20,20,30,0.97)',
-        color: 'white',
-        padding: 24,
-        borderRadius: 16,
-        boxShadow: '0 8px 32px #000a',
-        minWidth: 320,
-        maxWidth: 420,
-        position: 'relative',
-      }}>
-        <button onClick={onClose} style={{ position: 'absolute', top: 8, right: 12, background: 'none', color: '#fff', border: 'none', fontSize: 22, cursor: 'pointer' }}>&times;</button>
-        <h2 style={{ marginTop: 0 }}>{sectionData[section].title}</h2>
-        {sectionData[section].content}
+      <div
+        style={{
+          background: 'rgba(20,20,30,0.97)',
+          color: 'white',
+          padding: 32,
+          borderRadius: 24,
+          boxShadow: '0 12px 48px #000b',
+          minWidth: 340,
+          maxWidth: 480,
+          position: 'relative',
+          border: '1.5px solid #444',
+          backdropFilter: 'blur(8px)',
+          fontFamily: 'Inter, sans-serif',
+        }}
+      >
+        <button
+          onClick={onClose}
+          style={{
+            position: 'absolute',
+            top: 12,
+            right: 18,
+            background: 'rgba(40,40,60,0.7)',
+            color: '#fff',
+            border: 'none',
+            fontSize: 26,
+            borderRadius: '50%',
+            width: 36,
+            height: 36,
+            cursor: 'pointer',
+            boxShadow: '0 2px 8px #0006',
+            transition: 'background 0.2s',
+          }}
+          onMouseOver={e => (e.currentTarget.style.background = '#444')}
+          onMouseOut={e => (e.currentTarget.style.background = 'rgba(40,40,60,0.7)')}
+          aria-label="Close section panel"
+        >
+          &times;
+        </button>
+        <h2 style={{ marginTop: 0, marginBottom: 16, fontSize: 28, letterSpacing: 1 }}>{sectionData[section].title}</h2>
+        <div style={{ fontSize: 17, lineHeight: 1.7 }}>{sectionData[section].content}</div>
       </div>
     </Html>
   );
