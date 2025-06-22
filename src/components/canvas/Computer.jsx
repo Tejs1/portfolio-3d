@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 
 const Computer = ({ isMobile }) => {
   const computer = useRef();
-  
+
   // Rotation animation
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
@@ -19,29 +19,29 @@ const Computer = ({ isMobile }) => {
         <boxGeometry args={[1.5, 0.1, 0.8]} />
         <meshStandardMaterial color="#333333" />
       </mesh>
-      
+
       {/* Monitor Stand */}
       <mesh position={[0, -0.3, 0]}>
         <boxGeometry args={[0.2, 0.8, 0.2]} />
         <meshStandardMaterial color="#444444" />
       </mesh>
-      
+
       {/* Monitor */}
       <mesh position={[0, 0.5, 0]}>
         <boxGeometry args={[3, 2, 0.15]} />
         <meshStandardMaterial color="#111111" />
       </mesh>
-      
+
       {/* Screen */}
       <mesh position={[0, 0.5, 0.08]}>
         <boxGeometry args={[2.8, 1.8, 0.01]} />
-        <meshStandardMaterial 
-          color="#3d85c6" 
+        <meshStandardMaterial
+          color="#3d85c6"
           emissive="#3d85c6"
           emissiveIntensity={0.5}
         />
       </mesh>
-      
+
       {/* Keyboard */}
       <mesh position={[0, -0.7, 1]}>
         <boxGeometry args={[2, 0.1, 0.8]} />
