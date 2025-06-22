@@ -55,7 +55,9 @@ export const sectionData: Record<SectionName, { title: string; content: JSX.Elem
     content: (
       <div style={{ maxWidth: 400 }}>
         <h2>Contact</h2>
-        <p>Email: your-email@example.com</p>
+        <p>Email: <a href="mailto:your-email@example.com" style={{ color: '#93c5fd', textDecoration: 'underline' }}>your-email@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" style={{ color: '#6ee7b7', textDecoration: 'underline' }}>linkedin.com/in/yourprofile</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" style={{ color: '#fca5a5', textDecoration: 'underline' }}>github.com/yourusername</a></p>
         <p>Use the contact form in the main site for direct messages.</p>
       </div>
     ),
