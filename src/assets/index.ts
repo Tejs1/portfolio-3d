@@ -25,6 +25,12 @@ import creator from "./service/creator.svg";
 import mobile from "./service/mobile.svg";
 import web from "./service/web.svg";
 
+// UI elements
+import logo from "./logo.svg";
+import menu from "./menu.svg";
+import close from "./close.svg";
+import github from "./github.png";
+
 // Projects
 // Will be using external URLs as defined in constants
 
@@ -50,4 +56,8 @@ export {
   creator,
   mobile,
   web,
+  logo,
+  menu,
+  close,
+  github,
 };
